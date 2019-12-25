@@ -10,29 +10,7 @@ public class DBUtil {
 	private HashMap<String,User> users = new HashMap<String,User>();
 	
 	private DBUtil() {
-		User u1 = new User();
-		u1.setCardId("1001");
-		u1.setCardPwd("123456");
-		u1.setUserName("ÕÅÈı");
-		u1.setCall("110");
-		u1.setAccount(1000);
-		users.put(u1.getCardId(),u1);
-		
-		User u2 = new User();
-		u2.setCardId("1002");
-		u2.setCardPwd("123456");
-		u2.setUserName("ÀîËÄ");
-		u2.setCall("120");
-		u2.setAccount(1000);
-		users.put(u2.getCardId(),u2);
-		
-		User u3 = new User();
-		u3.setCardId("1003");
-		u3.setCardPwd("123456");
-		u3.setUserName("ÍõÎå");
-		u3.setCall("119");
-		u3.setAccount(1000);
-		users.put(u3.getCardId(),u3);
+		getUsersFromInputStream("E:\\project1\\ç¬¬15-16å‘¨é“¶è¡Œ\\Bank\\user.txt");
 	}
 	
 	private void getUsersFromInputStream(String isName){
@@ -41,7 +19,7 @@ public class DBUtil {
 			byte[] content=new byte[1204];
 			int i=0;
 			int conInteger=0;
-			while(true){//´Ë´¦½ö½öÊÇ´òÓ¡¶Á³öÀ´µÄĞĞ
+			while(true){//æ­¤å¤„ä»…ä»…æ˜¯æ‰“å°è¯»å‡ºæ¥çš„è¡Œ
 				try{
 					conInteger=fs.read();
 				} catch (IOException e){
@@ -99,26 +77,27 @@ public class DBUtil {
 	}
 
 	
-	//Ôö¼ÓÒ»¸öÓÃ»§
+	//å¢åŠ ä¸€ä¸ªç”¨æˆ·
 	public void addUer(User u){
 		users.put(u.getCardId(),u);
 	}
-	//´æÅÌ²Ù×÷
+	//å­˜ç›˜æ“ä½œ
 		public void update() {
 			Set<String> userSet=users.keySet();
 			StringBuffer uStringBuffer=new StringBuffer();
 			for(String cardId:userSet) {
 				User u=(User)users.get(cardId);
 				String uString=u.getCardId()+","
+						+u.getCall()+","
 						+u.getCardPwd()+","
 						+u.getUserName()+","
-						+u.getCall()+","
+						
 						+u.getAccount()+"\r\n";
 				uStringBuffer.append(uString);
 			}
-			putUsersToFile(uStringBuffer.toString(),"D:\\user.dat");
+			putUsersToFile(uStringBuffer.toString(),"E:\\project1\\ç¬¬15-16å‘¨é“¶è¡Œ\\Bank\\user.txt");
 		}
-		//Ğ´ÈëÎÄ¼şµÄº¯Êı
+		//å†™å…¥æ–‡ä»¶çš„å‡½æ•°
 		private void putUsersToFile(String uString,String osName) {
 			try {
 				FileOutputStream fos = new FileOutputStream(osName);
