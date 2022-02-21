@@ -1,1 +1,1 @@
-vmess=103.253.24.78:7896, method=aes-128-gcm, password=dcf6c987-e662-4214-dd4e-afc99b273a11, fast-open=false, udp-relay=false, aead=true, tag=白嫖
+vmess=103.253.24.78:7896, method=aes-128-gcm, password=e0853adf-6555-475a-b557-2b27aa637060, fast-open=false, udp-relay=false, aead=true, tag=白嫖
