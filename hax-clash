@@ -5,7 +5,7 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: "hax-白嫖", server: 103.253.24.78, port: 6785, type: vmess, uuid: 71bfb52f-20d9-44ed-eeef-c4bae21ed9dc, alterId: 0, cipher: auto, tls: false}
+  - {name: "hax-白嫖", server: 103.253.24.78, port: 7896, type: vmess, uuid: e0853adf-6555-475a-b557-2b27aa637060, alterId: 0, cipher: auto, tls: false}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
