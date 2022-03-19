@@ -1,1 +1,1 @@
-vmess=zhixiangbaipiao.ml:443, method=aes-128-gcm, password=19bced17-a205-4e99-9546-462b47ff6d8c, fast-open=false, udp-relay=false, aead=true, tag=白嫖
+vmess=91.134.238.133:4562, method=aes-128-gcm, password=8e0d6d25-7ed4-4699-fd70-423940f38bf1, fast-open=false, udp-relay=false, aead=true, tag=白嫖
